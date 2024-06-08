@@ -1,0 +1,8 @@
+<h2>Add Room</h2>
+<form (ngSubmit)="saveRoom()">
+  <div>
+    <label for="roomName">Room Name:</label>
+    <input id="roomName" [(ngModel)]="roomEntity.name" name="name" required>
+  </div>
+  <button type="submit">Save</button>
+</form>

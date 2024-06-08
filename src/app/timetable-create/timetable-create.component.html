@@ -1,0 +1,33 @@
+<div>
+  <form (ngSubmit)="saveTimetable()">
+    <label for="class">Class:</label>
+    <select id="class" [(ngModel)]="timetable.classId" name="class">
+      <option *ngFor="let classEntity of classes" [value]="classEntity.id">{{ classEntity.name }}</option>
+    </select>
+
+    <label for="room">Room:</label>
+    <select id="room" [(ngModel)]="timetable.roomId" name="room">
+      <option *ngFor="let roomEntity of rooms" [value]="roomEntity.id">{{ roomEntity.name }}</option>
+    </select>
+
+    <label for="subject">Subject:</label>
+    <select id="subject" [(ngModel)]="timetable.subjectId" name="subject">
+      <option *ngFor="let subjectEntity of subjects" [value]="subjectEntity.id">{{ subjectEntity.name }}</option>
+    </select>
+
+    <label for="professor">Professor:</label>
+    <select id="professor" [(ngModel)]="timetable.professorId" name="professor">
+      <option *ngFor="let professorEntity of professors" [value]="professorEntity.id">{{ professorEntity.name }}</option>
+    </select>
+
+    <div *ngFor="let day of days">
+      <label>{{ day }}</label>
+      <div *ngFor="let time of timeRanges">
+        <input title="onTimeSlotChange" type="checkbox" (change)="onTimeSlotChange(day, time, $event)">
+        {{ time }}
+      </div>
+    </div>
+
+    <button type="submit">Save Timetable</button>
+  </form>
+</div>

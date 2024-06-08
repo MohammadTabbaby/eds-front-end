@@ -1,0 +1,8 @@
+<h2>Add Professor</h2>
+<form (ngSubmit)="saveProfessor()">
+  <div>
+    <label for="professorName">Professor Name:</label>
+    <input id="professorName" [(ngModel)]="professorEntity.name" name="name" required>
+  </div>
+  <button type="submit">Save</button>
+</form>

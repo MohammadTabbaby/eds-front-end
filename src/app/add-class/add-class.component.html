@@ -1,0 +1,8 @@
+<h2>Add Class</h2>
+<form (ngSubmit)="saveClass()">
+  <div>
+    <label for="className">Class Name:</label>
+    <input id="className" [(ngModel)]="classEntity.name" name="name" required>
+  </div>
+  <button type="submit">Save</button>
+</form>

@@ -1,0 +1,8 @@
+<h2>Add Subject</h2>
+<form (ngSubmit)="saveSubject()">
+  <div>
+    <label for="subjectName">Subject Name:</label>
+    <input id="subjectName" [(ngModel)]="subjectEntity.name" name="name" required>
+  </div>
+  <button type="submit">Save</button>
+</form>
