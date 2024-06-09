@@ -1,21 +1,21 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: scheduling-service-front-deployment
+  name: frontend-deployment
   labels:
-    app: scheduling-service-front
+    app: frontend
 spec:
   replicas: 3
   selector:
     matchLabels:
-      app: scheduling-service-front
+      app: frontend
   template:
     metadata:
       labels:
-        app: scheduling-service-front
+        app: frontend
     spec:
       containers:
-      - name: scheduling-service-front
-        image: scheduling-service-front
+      - name: frontend-container
+        image: mohammadtabbaby/frontend
         ports:
         - containerPort: 80
