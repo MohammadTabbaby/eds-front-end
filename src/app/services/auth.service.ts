@@ -7,7 +7,7 @@ import { map } from 'rxjs/operators';
   providedIn: 'root'
 })
 export class AuthService {
-  private apiUrl = 'http://localhost:9002/api/auth';
+  private apiUrl = 'http://localhost:32247/api/auth';
   private isAuthenticated = false;
 
   constructor(private http: HttpClient) {}

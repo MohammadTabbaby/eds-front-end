@@ -7,7 +7,7 @@ import { RoomEntity } from '../models/room.entity';
   providedIn: 'root'
 })
 export class RoomService {
-  private apiUrl = 'http://localhost:9002/api/rooms';
+  private apiUrl = 'http://localhost:32247/api/rooms';
 
   constructor(private http: HttpClient) { }
 

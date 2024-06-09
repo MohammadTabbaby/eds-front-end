@@ -6,7 +6,7 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class TimetableService {
-  private baseUrl = 'http://localhost:9002/api/timetables';
+  private baseUrl = 'http://localhost:32247/api/timetables';
 
   constructor(private http: HttpClient) {}
 

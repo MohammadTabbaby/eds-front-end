@@ -7,7 +7,7 @@ import { ClassEntity } from '../models/class.entity';
   providedIn: 'root'
 })
 export class ClassService {
-  private apiUrl = 'http://localhost:9002/api/classes';
+  private apiUrl = 'http://localhost:32247/api/classes';
 
   constructor(private http: HttpClient) { }
 
