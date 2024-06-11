@@ -7,7 +7,7 @@ import { ProfessorEntity } from '../models/professor.entity';
   providedIn: 'root'
 })
 export class ProfessorService {
-  private apiUrl = 'http://localhost:32247/api/professors';
+  private apiUrl = 'http://localhost:9002/api/professors';
 
   constructor(private http: HttpClient) { }
 

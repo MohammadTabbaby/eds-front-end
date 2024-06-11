@@ -7,7 +7,7 @@ import { SubjectEntity } from '../models/subject.entity';
   providedIn: 'root'
 })
 export class SubjectService {
-  private apiUrl = 'http://localhost:32247/api/subjects';
+  private apiUrl = 'http://localhost:9002/api/subjects';
 
   constructor(private http: HttpClient) { }
 
