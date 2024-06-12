@@ -1,0 +1,43 @@
+.custom-card {
+  background-color: #f0f0f0;
+  width: 600px;
+  margin: auto;
+  padding: 20px;
+}
+
+.full-width {
+  width: 100%;
+  margin-bottom: 15px;
+}
+
+.timetable-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.timetable-day {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.timetable-label {
+  min-width: 100px; /* Adjust width as needed */
+  margin-right: 10px;
+}
+
+.timetable-time {
+  display: flex;
+  gap: 10px;
+}
+
+.time-slot {
+  display: flex;
+  flex-direction: column;
+}
+
+.checkbox-container {
+  display: flex;
+  align-items: center;
+}
+

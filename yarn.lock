@@ -167,10 +167,10 @@
     "vite" "5.2.11"
     "watchpack" "2.4.1"
 
-"@angular/cdk@^18.0.1":
-  "integrity" "sha512-KQTfi17PV/DYg8UcsoF9Jxfz+3nCPImm5eY1Mq7wGK8qUOlw9Y8fZ3eNU9ZH4hdg2FcKXJrAJqSA7I2nqdSX7w=="
-  "resolved" "https://registry.npmjs.org/@angular/cdk/-/cdk-18.0.2.tgz"
-  "version" "18.0.2"
+"@angular/cdk@^18.0.3":
+  "integrity" "sha512-F6kXAoIWUbvhvbSGnMxrKJZsI7rhGKDXVFFf9m+ZQAbqboSyDbbszux7Em4CEh27LaXYNFltUcKdCQ3hdp7Kig=="
+  "resolved" "https://registry.npmjs.org/@angular/cdk/-/cdk-18.0.3.tgz"
+  "version" "18.0.3"
   dependencies:
     "tslib" "^2.3.0"
   optionalDependencies:
@@ -251,10 +251,10 @@
   dependencies:
     "tslib" "^2.3.0"
 
-"@angular/material@^18.0.1":
-  "integrity" "sha512-bns6X6HAonBnj+I0QkbqfD4u5ehs8HZP3ateb19ZbfhVLJEu0MB/AJfeM3cinPrQnTMdYBjIDTtIyQWh//EFiw=="
-  "resolved" "https://registry.npmjs.org/@angular/material/-/material-18.0.2.tgz"
-  "version" "18.0.2"
+"@angular/material@^18.0.3":
+  "integrity" "sha512-VIlK+0CxreAkDmr05TKelTr11I7yUtGPwRTFaWfQtXNkYEwGE1iuZGz3Iz8otxvHsTLC74Er4vMSYndwJvMyjQ=="
+  "resolved" "https://registry.npmjs.org/@angular/material/-/material-18.0.3.tgz"
+  "version" "18.0.3"
   dependencies:
     "@material/animation" "15.0.0-canary.7f224ddd4.0"
     "@material/auto-init" "15.0.0-canary.7f224ddd4.0"
@@ -3236,10 +3236,10 @@
   "resolved" "https://registry.npmjs.org/boolbase/-/boolbase-1.0.0.tgz"
   "version" "1.0.0"
 
-"bootstrap@^4.6.2":
-  "integrity" "sha512-51Bbp/Uxr9aTuy6ca/8FbFloBUJZLHwnhTcnjIeRn2suQWsWzcuJhGjKDB5eppVte/8oCdOL3VuwxvZDUggwGQ=="
-  "resolved" "https://registry.npmjs.org/bootstrap/-/bootstrap-4.6.2.tgz"
-  "version" "4.6.2"
+"bootstrap@^5.3.3":
+  "integrity" "sha512-8HLCdWgyoMguSO9o+aH+iuZ+aht+mzW0u3HIMzVu7Srrpv7EBBxTnrFlSCskwdY1+EOFQSm7uMJhNQHkdPcmjg=="
+  "resolved" "https://registry.npmjs.org/bootstrap/-/bootstrap-5.3.3.tgz"
+  "version" "5.3.3"
 
 "brace-expansion@^1.1.7":
   "integrity" "sha512-iCuPHDFgrHX7H2vEI/5xpz07zSHB00TpugqhmYtVmMO6518mCuRMoOYFldEBl0g187ufozdaHgWKcYFb61qGiA=="

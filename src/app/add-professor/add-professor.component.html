@@ -1,8 +1,20 @@
-<h2>Add Professor</h2>
-<form (ngSubmit)="saveProfessor()">
-  <div>
-    <label for="professorName">Professor Name:</label>
-    <input id="professorName" [(ngModel)]="professorEntity.name" name="name" required>
-  </div>
-  <button type="submit">Save</button>
-</form>
+<!-- add-professor.component.html -->
+<div class="container mt-4">
+  <mat-card class="custom-card">
+    <mat-card-header>
+      <mat-card-title>Add Professor</mat-card-title>
+    </mat-card-header>
+    
+    <mat-card-content class="center-content">
+      <form (ngSubmit)="saveProfessor()" class="center-form">
+        <mat-form-field class="full-width">
+          <mat-label>Professor Name</mat-label>
+          <input title="name" matInput id="professorName" [(ngModel)]="professorEntity.name" name="name" required>
+        </mat-form-field>
+        
+        <button mat-raised-button color="primary" type="submit">Save</button>
+      </form>
+    </mat-card-content>
+    
+  </mat-card>
+</div>

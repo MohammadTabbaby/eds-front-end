@@ -1,8 +1,20 @@
-<h2>Add Class</h2>
-<form (ngSubmit)="saveClass()">
-  <div>
-    <label for="className">Class Name:</label>
-    <input id="className" [(ngModel)]="classEntity.name" name="name" required>
-  </div>
-  <button type="submit">Save</button>
-</form>
+<!-- add-class.component.html -->
+<div class="container mt-4">
+  <mat-card class="custom-card">
+    <mat-card-header>
+      <mat-card-title>Add Class</mat-card-title>
+    </mat-card-header>
+    
+    <mat-card-content class="center-content">
+      <form (ngSubmit)="saveClass()" class="center-form">
+        <mat-form-field class="full-width">
+          <mat-label>Class Name</mat-label>
+          <input title="name" matInput id="className" [(ngModel)]="classEntity.name" name="name" required>
+        </mat-form-field>
+        
+        <button mat-raised-button color="primary" type="submit">Save</button>
+      </form>
+    </mat-card-content>
+    
+  </mat-card>
+</div>

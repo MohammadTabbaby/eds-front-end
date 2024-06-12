@@ -1,29 +1,47 @@
+/* styles.scss */
+.custom-card {
+  background-color: #f0f0f0;
+  width: 800px;
+  margin: auto;
+  padding: 20px;
+}
+
+.full-width {
+  width: 100%;
+  margin-bottom: 15px;
+}
+
 .button-container {
-    display: flex;
-    gap: 10px;
-    margin-bottom: 20px;
-  }
-  
-  .selection-container {
-    margin-bottom: 20px;
-  }
-  
-  .timetable-container {
-    margin-top: 20px;
-  }
-  
-  table {
-    width: 100%;
-    border-collapse: collapse;
-  }
-  
-  th, td {
-    border: 1px solid #ddd;
-    padding: 8px;
-    text-align: left;
-  }
-  
-  th {
-    background-color: #f2f2f2;
-  }
-  
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 20px;
+}
+
+.selection-container {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.timetable-container {
+  margin-top: 20px;
+}
+
+.timetable-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.timetable-table th, .timetable-table td {
+  padding: 10px;
+  border: 1px solid #ddd;
+}
+
+.timetable-table th {
+  background-color: #f0f0f0;
+  text-align: center;
+}
+
+.timetable-table td {
+  text-align: center;
+}

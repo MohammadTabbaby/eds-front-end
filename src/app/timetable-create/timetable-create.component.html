@@ -1,33 +1,68 @@
-<div>
-  <form (ngSubmit)="saveTimetable()">
-    <label for="class">Class:</label>
-    <select id="class" [(ngModel)]="timetable.classId" name="class">
-      <option *ngFor="let classEntity of classes" [value]="classEntity.id">{{ classEntity.name }}</option>
-    </select>
+<div class="container mt-4">
+  <mat-card class="custom-card">
+    <mat-card-header>
+      <mat-card-title>Create Timetable</mat-card-title>
+    </mat-card-header>
+    
+    <mat-card-content>
+      <form (ngSubmit)="saveTimetable()" class="timetable-form">
+        <mat-form-field class="full-width">
+          <mat-label>Class</mat-label>
+          <mat-select id="class" [(ngModel)]="timetable.classId" name="class">
+            <mat-option *ngFor="let classEntity of classes" [value]="classEntity.id">
+              {{ classEntity.name }}
+            </mat-option>
+          </mat-select>
+        </mat-form-field>
 
-    <label for="room">Room:</label>
-    <select id="room" [(ngModel)]="timetable.roomId" name="room">
-      <option *ngFor="let roomEntity of rooms" [value]="roomEntity.id">{{ roomEntity.name }}</option>
-    </select>
+        <mat-form-field class="full-width">
+          <mat-label>Room</mat-label>
+          <mat-select id="room" [(ngModel)]="timetable.roomId" name="room">
+            <mat-option *ngFor="let roomEntity of rooms" [value]="roomEntity.id">
+              {{ roomEntity.name }}
+            </mat-option>
+          </mat-select>
+        </mat-form-field>
 
-    <label for="subject">Subject:</label>
-    <select id="subject" [(ngModel)]="timetable.subjectId" name="subject">
-      <option *ngFor="let subjectEntity of subjects" [value]="subjectEntity.id">{{ subjectEntity.name }}</option>
-    </select>
+        <mat-form-field class="full-width">
+          <mat-label>Subject</mat-label>
+          <mat-select id="subject" [(ngModel)]="timetable.subjectId" name="subject">
+            <mat-option *ngFor="let subjectEntity of subjects" [value]="subjectEntity.id">
+              {{ subjectEntity.name }}
+            </mat-option>
+          </mat-select>
+        </mat-form-field>
 
-    <label for="professor">Professor:</label>
-    <select id="professor" [(ngModel)]="timetable.professorId" name="professor">
-      <option *ngFor="let professorEntity of professors" [value]="professorEntity.id">{{ professorEntity.name }}</option>
-    </select>
+        <mat-form-field class="full-width">
+          <mat-label>Professor</mat-label>
+          <mat-select id="professor" [(ngModel)]="timetable.professorId" name="professor">
+            <mat-option *ngFor="let professorEntity of professors" [value]="professorEntity.id">
+              {{ professorEntity.name }}
+            </mat-option>
+          </mat-select>
+        </mat-form-field>
 
-    <div *ngFor="let day of days">
-      <label>{{ day }}</label>
-      <div *ngFor="let time of timeRanges">
-        <input title="onTimeSlotChange" type="checkbox" (change)="onTimeSlotChange(day, time, $event)">
-        {{ time }}
-      </div>
-    </div>
+        <div class="timetable-day">
+          <label class="timetable-label">Days:</label>
+          <div class="timetable-time">
+            <div *ngFor="let time of timeRanges">
+              {{ time }}
+            </div>
+          </div>
+        </div>
 
-    <button type="submit">Save Timetable</button>
-  </form>
+        <div *ngFor="let day of days" class="timetable-day">
+          <label>{{ day }}</label>
+          <div class="timetable-time">
+            <div *ngFor="let time of timeRanges">
+              <mat-checkbox (change)="onTimeSlotChange(day, time, $event)">
+              </mat-checkbox>
+            </div>
+          </div>
+        </div>
+
+        <button mat-raised-button color="primary" type="submit">Save Timetable</button>
+      </form>
+    </mat-card-content>
+  </mat-card>
 </div>

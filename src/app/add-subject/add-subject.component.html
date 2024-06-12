@@ -1,8 +1,20 @@
-<h2>Add Subject</h2>
-<form (ngSubmit)="saveSubject()">
-  <div>
-    <label for="subjectName">Subject Name:</label>
-    <input id="subjectName" [(ngModel)]="subjectEntity.name" name="name" required>
-  </div>
-  <button type="submit">Save</button>
-</form>
+<!-- add-subject.component.html -->
+<div class="container mt-4">
+  <mat-card class="custom-card">
+    <mat-card-header>
+      <mat-card-title>Add Subject</mat-card-title>
+    </mat-card-header>
+    
+    <mat-card-content class="center-content">
+      <form (ngSubmit)="saveSubject()" class="center-form">
+        <mat-form-field class="full-width">
+          <mat-label>Subject Name</mat-label>
+          <input title="name" matInput id="subjectName" [(ngModel)]="subjectEntity.name" name="name" required>
+        </mat-form-field>
+        
+        <button mat-raised-button color="primary" type="submit">Save</button>
+      </form>
+    </mat-card-content>
+    
+  </mat-card>
+</div>

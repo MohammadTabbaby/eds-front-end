@@ -1,5 +1,16 @@
+
+html, body { 
+    height: 100%;
+    
+}
+
+/* styles.css or styles.scss */
 body {
-    background: #222d32;
-    font-family: "Roboto", sans-serif;
+    background-color: #6c757d; /* Replace with your preferred color */
+    margin: 0; /* Remove default body margin */
+    padding: 0; /* Remove default body padding */
   }
+  
+
+  
   

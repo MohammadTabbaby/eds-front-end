@@ -1,8 +1,20 @@
-<h2>Add Room</h2>
-<form (ngSubmit)="saveRoom()">
-  <div>
-    <label for="roomName">Room Name:</label>
-    <input id="roomName" [(ngModel)]="roomEntity.name" name="name" required>
-  </div>
-  <button type="submit">Save</button>
-</form>
+<!-- add-room.component.html -->
+<div class="container mt-4">
+  <mat-card class="custom-card">
+    <mat-card-header>
+      <mat-card-title>Add Room</mat-card-title>
+    </mat-card-header>
+    
+    <mat-card-content class="center-content">
+      <form (ngSubmit)="saveRoom()" class="center-form">
+        <mat-form-field class="full-width">
+          <mat-label>Room Name</mat-label>
+          <input title="name" matInput id="roomName" [(ngModel)]="roomEntity.name" name="name" required>
+        </mat-form-field>
+        
+        <button mat-raised-button color="primary" type="submit">Save</button>
+      </form>
+    </mat-card-content>
+    
+  </mat-card>
+</div>

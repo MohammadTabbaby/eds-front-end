@@ -1,0 +1,18 @@
+/* styles.css */
+.custom-card {
+    background-color: #f0f0f0;
+    margin: 100px;
+    padding: 50px; /* Grey background */
+  }
+  
+  .menu {
+    display: flex;
+    align-items: center; /* Center items vertically */
+    margin-bottom: 100px; /* Adjust spacing */
+  }
+  
+  .menu-buttons {
+    display: flex;
+    justify-content: flex-end; /* Align buttons to the right */
+  }
+  

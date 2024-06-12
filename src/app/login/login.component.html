@@ -1,12 +1,28 @@
-<h2>Login</h2>
-<form (ngSubmit)="login()">
-  <div>
-    <label for="username">Username:</label>
-    <input id="username" [(ngModel)]="username" name="username" required>
+<div class="container">
+  <div class="row">
+    <div class="col-md-6 offset-md-3">
+      <div class="signup-form">
+        <img src="/assets/admin.png" alt="admin Logo">
+        <br>
+        <br>
+        <br>
+
+        <form (ngSubmit)="login()">
+          <div class="form-group">
+            <input title="username" type="text" class="form-control" placeholder="username" id="username" [(ngModel)]="username" name="username" required required>
+          </div>
+          <br>
+
+          <div class="form-group">
+            <input title="password" type="password" class="form-control" id="password" [(ngModel)]="password" name="password" required>
+          </div>
+          <br>
+          <br>
+
+          <button class="btn btn-primary btn-block" type="submit">Connecter</button>
+        </form>
+      </div>
+    </div>
   </div>
-  <div>
-    <label for="password">Password:</label>
-    <input id="password" type="password" [(ngModel)]="password" name="password" required>
-  </div>
-  <button type="submit">Login</button>
-</form>
+</div>
+<br>

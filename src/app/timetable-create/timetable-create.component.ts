@@ -25,7 +25,14 @@ export class TimetableCreateComponent implements OnInit {
   subjects: any[] = [];
   professors: any[] = [];
   days: string[] = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
-  timeRanges: string[] = ['08:30-10:00', '10:00-11:30', '11:30-13:00', '14:00-15:30', '15:30-17:00', '17:00-18:30'];
+  timeRanges: string[] = [
+    '08:30 - 10:00',
+    '10:10 - 11:40',
+    '11:50 - 13:20',
+    '13:30 - 14:20',
+    '14:30 - 16:00',
+    '16:10 - 17:40'
+  ];
 
   constructor(
     private timetableService: TimetableService,

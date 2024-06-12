@@ -1,48 +1,62 @@
-<div>
-  <div class="button-container">
-    <button (click)="viewType='class'">View Classes / Professors Schedule</button>
-    <button (click)="viewType='professor'">View Professor Schedule</button>
-    <button (click)="goBackToHome()">Go Back To Home</button>
-  </div>
+<div class="container mt-4">
+  <mat-card class="custom-card">
+    <mat-card-content>
 
-  <div *ngIf="viewType === 'class'" class="selection-container">
-    <label for="class">Select Class:</label>
-    <select id="class" [(ngModel)]="selectedClassId" name="class">
-      <option *ngFor="let classEntity of classes" [value]="classEntity.id">{{ classEntity.name }}</option>
-    </select>
-    <button (click)="viewClassTimetable()">View Timetable</button>
-  </div>
+      <!-- Button Container -->
+      <div class="button-container">
+        <button mat-raised-button color="primary" (click)="viewType='class'">View Classes / Professors Schedule</button>
+        <button mat-raised-button color="primary" (click)="viewType='professor'">View Professor Schedule</button>
+        <button mat-raised-button color="accent" (click)="goBackToHome()">Go Back To Home</button>
+      </div>
 
-  <div *ngIf="viewType === 'professor'" class="selection-container">
-    <label for="professor">Select Professor:</label>
-    <select id="professor" [(ngModel)]="selectedProfessorId" name="professor">
-      <option *ngFor="let professorEntity of professors" [value]="professorEntity.id">{{ professorEntity.name }}</option>
-    </select>
-    <button (click)="viewProfessorTimetable()">View Timetable</button>
-  </div>
+      <!-- View Class Schedule Section -->
+      <div *ngIf="viewType === 'class'" class="selection-container">
+        <mat-form-field class="full-width">
+          <mat-label>Select Class</mat-label>
+          <mat-select id="class" [(ngModel)]="selectedClassId" name="class">
+            <mat-option *ngFor="let classEntity of classes" [value]="classEntity.id">{{ classEntity.name }}</mat-option>
+          </mat-select>
+        </mat-form-field>
+        <button mat-raised-button color="primary" (click)="viewClassTimetable()">View Timetable</button>
+      </div>
 
-  <div *ngIf="timetables.length > 0" class="timetable-container">
-    <h3>Timetable</h3>
-    <table>
-      <thead>
-        <tr>
-          <th>Time Slot</th>
-          <th *ngFor="let day of days">{{ day }}</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr *ngFor="let timeSlot of timeSlots">
-          <td>{{ timeSlot }}</td>
-          <td *ngFor="let day of days">
-            <div *ngIf="isTimeSlotAvailable(day, timeSlot)">
-              <div *ngFor="let timetable of getTimetablesForTimeSlot(day, timeSlot)">
-                <p><strong>Subject:</strong> {{ timetable.subject }}</p>
-                <p><strong>Professor:</strong> {{ timetable.professor }}</p>
-              </div>
-            </div>
-          </td>
-        </tr>
-      </tbody>
-    </table>
-  </div>
+      <!-- View Professor Schedule Section -->
+      <div *ngIf="viewType === 'professor'" class="selection-container">
+        <mat-form-field class="full-width">
+          <mat-label>Select Professor</mat-label>
+          <mat-select id="professor" [(ngModel)]="selectedProfessorId" name="professor">
+            <mat-option *ngFor="let professorEntity of professors" [value]="professorEntity.id">{{ professorEntity.name }}</mat-option>
+          </mat-select>
+        </mat-form-field>
+        <button mat-raised-button color="primary" (click)="viewProfessorTimetable()">View Timetable</button>
+      </div>
+
+      <!-- Timetable Display Section -->
+      <div *ngIf="timetables.length > 0" class="timetable-container">
+        <h3>Timetable</h3>
+        <table class="timetable-table">
+          <thead>
+            <tr>
+              <th>Time Slot</th>
+              <th *ngFor="let day of days">{{ day }}</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let timeSlot of timeSlots">
+              <td>{{ timeSlot }}</td>
+              <td *ngFor="let day of days">
+                <div *ngIf="isTimeSlotAvailable(day, timeSlot)">
+                  <div *ngFor="let timetable of getTimetablesForTimeSlot(day, timeSlot)">
+                    <p><strong>Subject:</strong> {{ timetable.subject }}</p>
+                    <p><strong>Professor:</strong> {{ timetable.professor }}</p>
+                  </div>
+                </div>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+    </mat-card-content>
+  </mat-card>
 </div>
