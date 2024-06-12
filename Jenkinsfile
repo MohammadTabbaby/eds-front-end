@@ -9,7 +9,7 @@ pipeline {
         KUBERNETES_DEPLOYMENT = 'frontend'
         DOCKER_IMAGE = 'mohammadtabbaby/frontend'
         DOCKER_TAG = 'latest'
-        KUBECONFIG = 'C:\\Users\\MohamedTabbabi\\.kube'  // Update this path to your actual kubeconfig path
+        KUBECONFIG = 'C:\\Users\\MohamedTabbabi\\.kube\\config'  // Update this path to your actual kubeconfig path
         SERVICE_YAML_FILE = 'frontend-service.yaml' // Path to your NodePort service YAML file
         DEPLOYMENT_YAML_FILE = 'deployment.yaml' // Path to your deployment YAML file
     }
@@ -27,12 +27,51 @@ pipeline {
             }
         }
 
+        stage('Install Node.js and npm') {
+            steps {
+                script {
+                    // Install Node.js and update PATH
+                    echo "Installing Node.js..."
+                    def nodejs = tool name: 'NODEJS', type: 'jenkins.plugins.nodejs.tools.NodeJSInstallation'
+                    env.PATH = "${nodejs}/bin:${env.PATH}"
+                }
+            }
+        }
+
         stage('Build Docker Image') {
             steps {
                 script {
                     // Build and tag the Docker image
                     echo "Building Docker image..."
                     bat "docker build -t ${DOCKER_IMAGE}:${DOCKER_TAG} ."
+                }
+            }
+        }
+
+        stage('Push Docker Image') {
+            steps {
+                script {
+                    // Push the Docker image to the registry
+                    echo "Pushing Docker image..."
+                    withCredentials([usernamePassword(credentialsId: 'docker-hub-credentials', usernameVariable: 'DOCKER_USERNAME', passwordVariable: 'DOCKER_PASSWORD')]) {
+                        bat """
+                        docker login -u %DOCKER_USERNAME% -p %DOCKER_PASSWORD%
+                        docker push ${DOCKER_IMAGE}:${DOCKER_TAG}
+                        """
+                    }
+                }
+            }
+        }
+
+        stage('Verify Docker Image') {
+            steps {
+                script {
+                    // Verify the Docker image exists
+                    echo "Verifying and pulling Docker image..."
+                    bat """
+                    docker pull ${DOCKER_IMAGE}:${DOCKER_TAG}
+                    docker images ${DOCKER_IMAGE}:${DOCKER_TAG}
+                    """
                 }
             }
         }
