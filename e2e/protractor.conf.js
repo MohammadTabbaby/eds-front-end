@@ -1,14 +1,11 @@
+// protractor.conf.js
+
 exports.config = {
     framework: 'jasmine',
-    seleniumAddress: 'http://localhost:4444/wd/hub',
-    specs: ['spec.js'],
+    specs: ['./src/**/*.e2e-spec.ts'],
     capabilities: {
-        browserName: 'MicrosoftEdge',
-        'ms:edgeOptions': {
-            // Vous pouvez spécifier d'autres options Edge ici
-        }
+      browserName: 'chrome' // Changez ceci selon le navigateur que vous souhaitez tester
     },
-    onPrepare: function() {
-        browser.ignoreSynchronization = false; // Pour les applications Angular
-    }
-};
+    baseUrl: 'http://localhost:4200/' // L'URL de base de votre application Angular
+  };
+  
