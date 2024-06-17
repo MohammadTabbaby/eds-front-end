@@ -1,0 +1,149 @@
+[33mcommit 22d12639d3ec5602cb344cd4e3f1e03747c77775[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmain[m[33m, [m[1;31morigin/main[m[33m)[m
+Author: MohammadTabbaby <mohammadtabbaby@gmail.com>
+Date:   Mon Jun 17 14:13:30 2024 +0100
+
+    removing selenium test from jenkins
+
+[33mcommit a30fb8320a6936300e71e35a6f2f4fbea5f3ef46[m
+Author: MohammadTabbaby <mohammadtabbaby@gmail.com>
+Date:   Mon Jun 17 14:10:55 2024 +0100
+
+    test selnium
+
+[33mcommit 217a390a94e053982b2e00921bde7ff56eef98f4[m
+Author: MohammadTabbaby <mohammadtabbaby@gmail.com>
+Date:   Mon Jun 17 14:02:56 2024 +0100
+
+    test selnium
+
+[33mcommit e5cd4d994b9465ac5d73037121023d5643fedc46[m
+Author: MohammadTabbaby <mohammadtabbaby@gmail.com>
+Date:   Mon Jun 17 12:16:40 2024 +0100
+
+    test ngrok
+
+[33mcommit 5547f905fbd9d82b334bbff6256a9ea0f3fbce45[m
+Author: MohammadTabbaby <mohammadtabbaby@gmail.com>
+Date:   Mon Jun 17 11:14:25 2024 +0100
+
+    test ngrok
+
+[33mcommit d89dbca5d0f24444bda76abfa3cd0ad01c4d354c[m
+Author: MohammadTabbaby <mohammadtabbaby@gmail.com>
+Date:   Mon Jun 17 10:23:49 2024 +0100
+
+    Remove large cache files and add to .gitignore
+
+[33mcommit c945618c2b40852a47f051e54d388e04d69b2b83[m
+Author: MohammadTabbaby <mohammadtabbaby@gmail.com>
+Date:   Mon Jun 17 10:13:14 2024 +0100
+
+    Remove .angular/cache/ directory and add to .gitignore
+
+[33mcommit 01b275d2bab89281af23d5234a00ec64c367e772[m
+Author: MohammadTabbaby <mohammadtabbaby@gmail.com>
+Date:   Mon Jun 17 10:11:34 2024 +0100
+
+    Track large files using Git LFS
+
+[33mcommit 68f40e1e599c3411fb86f5a3ddf529080d63fe81[m
+Author: MohammadTabbaby <mohammadtabbaby@gmail.com>
+Date:   Mon Jun 17 08:42:36 2024 +0100
+
+    Track large files using Git LFS
+
+[33mcommit 8271776ff1fa86174421d6cfd042be2d5cba21a8[m
+Author: MohammadTabbaby <mohammadtabbaby@gmail.com>
+Date:   Mon Jun 17 08:40:26 2024 +0100
+
+    Remove large cache files and add to .gitignore
+
+[33mcommit b4998a1009b4656ad83a782da2b9a12328b3d599[m
+Author: MohammadTabbaby <mohammadtabbaby@gmail.com>
+Date:   Sun Jun 16 22:24:31 2024 +0100
+
+    Use Git LFS for large files
+
+[33mcommit bd867bb99f72081c2437e6f9c3d3ec08b86d19c0[m
+Author: MohammadTabbaby <mohammadtabbaby@gmail.com>
+Date:   Sun Jun 16 22:10:21 2024 +0100
+
+    test selenium
+
+[33mcommit 1096582ce1cbb3862ee556836054e3e6b1b2dd78[m
+Author: MohammadTabbaby <mohammadtabbaby@gmail.com>
+Date:   Thu Jun 13 00:58:41 2024 +0100
+
+    design improvments
+
+[33mcommit 2cb9da92294e4b5c8966ff4db8b0612489d4f69b[m
+Author: MohammadTabbaby <mohammadtabbaby@gmail.com>
+Date:   Wed Jun 12 18:29:14 2024 +0100
+
+    fixed deployment
+
+[33mcommit fbf2264540730cdd5454e30017bb46ce5395286e[m
+Author: MohammadTabbaby <mohammadtabbaby@gmail.com>
+Date:   Tue Jun 11 23:36:20 2024 +0100
+
+    fixed deployment
+
+[33mcommit f56a55428874be6e46fbe9e847213af6745be580[m
+Author: MohammadTabbaby <mohammadtabbaby@gmail.com>
+Date:   Sun Jun 9 19:42:23 2024 +0100
+
+    deployment-test
+
+[33mcommit 790e3624a81e4d2f529d5750ac356c5bc87c701b[m
+Author: MohammadTabbaby <mohammadtabbaby@gmail.com>
+Date:   Sun Jun 9 16:34:27 2024 +0100
+
+    testing webhook
+
+[33mcommit ceafb76333da920945e004c5da0d5ab0dd5ed5cc[m
+Author: MohammadTabbaby <mohammadtabbaby@gmail.com>
+Date:   Sun Jun 9 16:08:25 2024 +0100
+
+    fixed jenkins pipeline
+
+[33mcommit ef33c09e49f80b1fa72d51e09c08ec07f5eea426[m
+Author: MohammadTabbaby <mohammadtabbaby@gmail.com>
+Date:   Sun Jun 9 15:59:27 2024 +0100
+
+    testing webhook
+
+[33mcommit 7d8e0b34f239bdde639223d184ff708364b93b05[m
+Author: MohammadTabbaby <mohammadtabbaby@gmail.com>
+Date:   Sun Jun 9 15:52:23 2024 +0100
+
+    testing webhook
+
+[33mcommit 7ac77c14771a04df3d86a2a5ab4dab79e11acd3c[m
+Author: MohammadTabbaby <mohammadtabbaby@gmail.com>
+Date:   Sun Jun 9 15:46:18 2024 +0100
+
+    testing webhook
+
+[33mcommit c42c389e100fd549b241f8f0a020b73fa1784876[m
+Author: MohammadTabbaby <mohammadtabbaby@gmail.com>
+Date:   Sun Jun 9 15:38:50 2024 +0100
+
+    testing webhook
+
+[33mcommit d98ee271e63be686e990f49a7933c41e75c9ce51[m
+Author: MohammadTabbaby <mohammadtabbaby@gmail.com>
+Date:   Sun Jun 9 15:35:47 2024 +0100
+
+    fixed jenkins pipeline
+
+[33mcommit d229ee9b59e303782825b7716d237ffabde06fd1[m
+Author: MohammadTabbaby <mohammadtabbaby@gmail.com>
+Date:   Sat Jun 8 18:52:09 2024 +0100
+
+    fixed viewschedule not working
+
+[33mcommit 8b71b6747b6e75c273c6543dca7a9d5597e2ace6[m
+Author: MohammadTabbaby <mohammadtabbaby@gmail.com>
+Date:   Tue Jun 4 23:31:35 2024 +0100
+
+    initial commit
