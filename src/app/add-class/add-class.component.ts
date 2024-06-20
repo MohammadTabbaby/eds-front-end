@@ -15,7 +15,6 @@ export class AddClassComponent {
 
   saveClass(): void {
     this.classService.saveClass(this.classEntity).subscribe(() => {
-      // Handle post-save actions
       this.router.navigate(['/home'])
     });
   }

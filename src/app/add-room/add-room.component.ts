@@ -19,7 +19,6 @@ export class AddRoomComponent {
       this.snackBar.open('Room added successfully', 'Close', {
         duration: 2000,
       });
-      // Handle post-save actions
       this.router.navigate(['/home'])
     });
   }

@@ -14,7 +14,6 @@ export class AddSubjectComponent {
 
   saveSubject(): void {
     this.subjectService.saveSubject(this.subjectEntity).subscribe(() => {
-      // Handle post-save actions
       this.router.navigate(['/home'])
     });
   }

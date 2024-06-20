@@ -5,13 +5,13 @@ pipeline {
         DOCKER_PATH = "C:\\Program Files\\Docker\\cli-plugins"
         PATH = "${DOCKER_PATH}:${PATH}"
         NODEJS_PATH = "C:\\Program Files\\nodejs"
-        KUBERNETES_NAMESPACE = 'default'  // Change this to your desired namespace
+        KUBERNETES_NAMESPACE = 'default'
         KUBERNETES_DEPLOYMENT = 'frontend'
         DOCKER_IMAGE = 'mohammadtabbaby/frontend'
         DOCKER_TAG = 'latest'
-        KUBECONFIG = 'C:\\Users\\MohamedTabbabi\\.kube\\config'  // Update this path to your actual kubeconfig path
-        SERVICE_YAML_FILE = 'frontend-service.yaml' // Path to your NodePort service YAML file
-        DEPLOYMENT_YAML_FILE = 'deployment.yaml' // Path to your deployment YAML file
+        KUBECONFIG = 'C:\\Users\\MohamedTabbabi\\.kube\\config'
+        SERVICE_YAML_FILE = 'frontend-service.yaml'
+        DEPLOYMENT_YAML_FILE = 'deployment.yaml'
     }
 
     stages {

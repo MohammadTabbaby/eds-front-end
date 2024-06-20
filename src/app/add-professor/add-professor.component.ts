@@ -14,7 +14,6 @@ export class AddProfessorComponent {
 
   saveProfessor(): void {
     this.professorService.saveProfessor(this.professorEntity).subscribe(() => {
-      // Handle post-save actions
       this.router.navigate(['/home'])
     });
   }
