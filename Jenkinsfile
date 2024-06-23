@@ -8,7 +8,7 @@ pipeline {
         KUBERNETES_NAMESPACE = 'default'
         KUBERNETES_DEPLOYMENT = 'frontend'
         DOCKER_IMAGE = 'mohammadtabbaby/frontend'
-        DOCKER_TAG = '%BUILD_ID%'
+        DOCKER_TAG = "${env.BUILD_ID}"
         KUBECONFIG = "C:\\Users\\MohamedTabbabi\\.kube\\config"
         SERVICE_YAML_FILE = 'frontend-service.yaml'
         DEPLOYMENT_YAML_FILE = 'deployment.yaml'
