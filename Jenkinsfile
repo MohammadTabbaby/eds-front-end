@@ -20,9 +20,9 @@ pipeline {
                 script {
                     // Ensure paths and tools are accessible
                     echo "Setting up environment..."
-                    bat 'echo Setting up Docker path: ${DOCKER_PATH}'
-                    bat 'echo Setting up Node.js path: ${NODEJS_PATH}'
-                    bat 'echo Setting up KUBECONFIG: ${KUBECONFIG}'
+                    bat 'echo Setting up Docker path: %DOCKER_PATH%'
+                    bat 'echo Setting up Node.js path: %NODEJS_PATH%'
+                    bat 'echo Setting up KUBECONFIG: %KUBECONFIG%'
                 }
             }
         }
@@ -33,7 +33,7 @@ pipeline {
                     // Install Node.js and update PATH
                     echo "Installing Node.js..."
                     def nodejs = tool name: 'NODEJS', type: 'jenkins.plugins.nodejs.tools.NodeJSInstallation'
-                    env.PATH = "${nodejs}/bin;${env.PATH}"
+                    env.PATH = "${nodejs}\\bin;${env.PATH}"
                 }
             }
         }
@@ -43,7 +43,7 @@ pipeline {
                 script {
                     // Build and tag the Docker image
                     echo "Building Docker image..."
-                    bat 'docker build -t ${DOCKER_IMAGE}:${DOCKER_TAG} .'
+                    bat 'docker build -t %DOCKER_IMAGE%:%DOCKER_TAG% .'
                 }
             }
         }
@@ -53,7 +53,7 @@ pipeline {
                 script {
                     // Verify the Docker image exists
                     echo "Verifying and pulling Docker image..."
-                    bat 'docker images ${DOCKER_IMAGE}:${DOCKER_TAG}'
+                    bat 'docker images %DOCKER_IMAGE%:%DOCKER_TAG%'
                 }
             }
         }
@@ -61,14 +61,14 @@ pipeline {
         stage('Deploy Docker Image to Kubernetes: Creating NodePort Service') {
             steps {
                 // Apply the NodePort service YAML file
-                bat 'kubectl apply -f ${SERVICE_YAML_FILE}'
+                bat 'kubectl apply -f %SERVICE_YAML_FILE%'
             }
         }
 
         stage('Deploy Docker Image to Kubernetes: Applying Deployment YAML') {
             steps {
                 // Apply the deployment YAML file
-                bat 'kubectl apply -f ${DEPLOYMENT_YAML_FILE}'
+                bat 'kubectl apply -f %DEPLOYMENT_YAML_FILE%'
             }
         }
     }
@@ -81,7 +81,7 @@ pipeline {
                 withCredentials([usernamePassword(credentialsId: 'docker-hub-credentials', usernameVariable: 'DOCKER_USERNAME', passwordVariable: 'DOCKER_PASSWORD')]) {
                     bat '''
                     docker login -u %DOCKER_USERNAME% -p %DOCKER_PASSWORD%
-                    docker push ${DOCKER_IMAGE}:${DOCKER_TAG}
+                    docker push %DOCKER_IMAGE%:%DOCKER_TAG%
                     '''
                 }
             }
