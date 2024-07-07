@@ -76,14 +76,15 @@ export class TimetableCreateComponent implements OnInit {
   }
 
   onTimeSlotChange(day: string, time: string, event: any): void {
-    const timeSlot = { day, startTime: time.split('-')[0], endTime: time.split('-')[1] };
-    if (event.target.checked) {
+    const timeSlot = { day, startTime: time.split('-')[0].trim(), endTime: time.split('-')[1].trim() };
+    if (event.checked) {
       this.timetable.timeSlots.push(timeSlot);
     } else {
       this.timetable.timeSlots = this.timetable.timeSlots.filter((slot: any) => 
         !(slot.day === day && slot.startTime === timeSlot.startTime && slot.endTime === timeSlot.endTime));
     }
   }
+  
 
   saveTimetable(): void {
     console.log('Formatted Timetable data:', this.timetable);
